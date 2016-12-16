@@ -6,6 +6,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:maxLines = "1000"
+        android:scrollbars = "vertical"
         android:id="@+id/carbon_monoxide"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 </FrameLayout>

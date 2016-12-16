@@ -2,6 +2,7 @@ package com.example.who.pollution.ui.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 import com.example.who.pollution.R;
@@ -26,9 +27,10 @@ public class CarbonMonoxide extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mManager = new RestManager();
         setContentView(R.layout.carbon_monoxide_fragment);
         mTextView = (TextView)findViewById(R.id.carbon_monoxide);
-        mManager = new RestManager();
+        mTextView.setMovementMethod(new ScrollingMovementMethod());
         fillData();
 
     }
