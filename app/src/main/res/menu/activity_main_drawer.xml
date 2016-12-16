@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_carbon_monoxide"
+            android:title="carbon_monoxide" />
+        <item
+            android:id="@+id/nav_ozone"
+            android:title="ozone" />
+        <item
+            android:id="@+id/nav_sulfur_dioxide"
+            android:title="sulfur_dioxide" />
+        <item
+            android:id="@+id/nav_nitrogen_dioxide"
+            android:title="nitrogen_dioxide" />
+    </group>
+
+
+</menu>
