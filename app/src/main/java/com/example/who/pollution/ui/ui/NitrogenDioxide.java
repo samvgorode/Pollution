@@ -28,22 +28,23 @@ public class NitrogenDioxide extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mManager = new RestManager();
         setContentView(R.layout.nitrogen_dioxide_fragment);
-        mTextView = (TextView)findViewById(R.id.nitrogen_dioxide);
+        mTextView = (TextView) findViewById(R.id.nitrogen_dioxide);
         fillData();
     }
-    public void fillData(){
+
+    public void fillData() {
 
         Call<NitrogenDioxidePojo> listCall = mManager.getPollutionService().getNitrogenDioxide();
-        listCall.enqueue(new Callback<NitrogenDioxidePojo>(){
+        listCall.enqueue(new Callback<NitrogenDioxidePojo>() {
 
             @Override
             public void onResponse(Call<NitrogenDioxidePojo> call, Response<NitrogenDioxidePojo> response) {
                 if (response.isSuccessful()) {
-                   nitrogenDioxidePojo = response.body();
+                    nitrogenDioxidePojo = response.body();
                     mTextView.setText(nitrogenDioxidePojo.toString());
 
 
-            }
+                }
 
             }
 
@@ -53,5 +54,6 @@ public class NitrogenDioxide extends AppCompatActivity {
             }
 
 
-    });
-}}
+        });
+    }
+}

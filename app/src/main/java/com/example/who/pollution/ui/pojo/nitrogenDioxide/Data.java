@@ -39,6 +39,7 @@ public class Data implements Serializable {
     public void setNo2Trop(No2Trop no2Trop) {
         this.no2_trop = no2Trop;
     }
+
     @Override
     public String toString() {
         return "\n No2= " + no2 +

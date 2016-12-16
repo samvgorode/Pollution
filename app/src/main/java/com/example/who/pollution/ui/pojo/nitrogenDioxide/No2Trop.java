@@ -35,6 +35,6 @@ public class No2Trop implements Serializable {
     @Override
     public String toString() {
         return "\nprecision=" + precision +
-                "\n value=" + value +"\n";
+                "\n value=" + value + "\n";
     }
 }

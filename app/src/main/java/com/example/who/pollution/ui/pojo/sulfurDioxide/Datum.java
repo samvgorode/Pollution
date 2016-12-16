@@ -39,6 +39,7 @@ public class Datum implements Serializable {
     public void setValue(Float value) {
         this.value = value;
     }
+
     @Override
     public String toString() {
         return "\n precision= " + precision +

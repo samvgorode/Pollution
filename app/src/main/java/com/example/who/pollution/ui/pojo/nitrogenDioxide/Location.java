@@ -30,6 +30,7 @@ public class Location implements Serializable {
     public void setLongitude(Double longitude) {
         this.longitude = longitude;
     }
+
     @Override
     public String toString() {
         return "\n latitude= " + latitude +

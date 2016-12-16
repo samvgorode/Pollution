@@ -26,23 +26,22 @@ public class SulfurDioxide extends AppCompatActivity {
     final String TAG = SulfurDioxide.class.getSimpleName();
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mManager = new RestManager();
         setContentView(R.layout.sulfur_dioxide_fragment);
-        mTextView = (TextView)findViewById(R.id.sulfur);
+        mTextView = (TextView) findViewById(R.id.sulfur);
         mTextView.setMovementMethod(new ScrollingMovementMethod());
         fillData();
 
 
-
     }
-    public void fillData(){
+
+    public void fillData() {
 
         Call<SulfurDioxidePojo> listCall = mManager.getPollutionService().getSulfurDioxide();
-        listCall.enqueue(new Callback<SulfurDioxidePojo>(){
+        listCall.enqueue(new Callback<SulfurDioxidePojo>() {
 
             @Override
             public void onResponse(Call<SulfurDioxidePojo> call, Response<SulfurDioxidePojo> response) {

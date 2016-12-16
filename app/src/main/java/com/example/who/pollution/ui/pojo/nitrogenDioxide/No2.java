@@ -29,6 +29,7 @@ public class No2 implements Serializable {
     public void setValue(Double value) {
         this.value = value;
     }
+
     @Override
     public String toString() {
         return "\nprecision=" + precision +

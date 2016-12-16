@@ -29,38 +29,32 @@ public class CarbonMonoxide extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mManager = new RestManager();
         setContentView(R.layout.carbon_monoxide_fragment);
-        mTextView = (TextView)findViewById(R.id.carbon_monoxide);
+        mTextView = (TextView) findViewById(R.id.carbon_monoxide);
         mTextView.setMovementMethod(new ScrollingMovementMethod());
         fillData();
-
     }
 
 
-    public void fillData(){
+    public void fillData() {
 
-            Call<CarbonMonoxidePojo> listCall = mManager.getPollutionService().getCarbonMonoxide();
-            listCall.enqueue(new Callback<CarbonMonoxidePojo>(){
+        Call<CarbonMonoxidePojo> listCall = mManager.getPollutionService().getCarbonMonoxide();
+        listCall.enqueue(new Callback<CarbonMonoxidePojo>() {
 
-                @Override
-                public void onResponse(Call<CarbonMonoxidePojo> call, Response<CarbonMonoxidePojo> response) {
-                    if (response.isSuccessful()) {
-                       carbonMonoxidePojo = response.body();
-                        mTextView.setText(carbonMonoxidePojo.toString());
-
-
-                    }
-
+            @Override
+            public void onResponse(Call<CarbonMonoxidePojo> call, Response<CarbonMonoxidePojo> response) {
+                if (response.isSuccessful()) {
+                    carbonMonoxidePojo = response.body();
+                    mTextView.setText(carbonMonoxidePojo.toString());
                 }
+            }
 
-                @Override
-                public void onFailure(Call<CarbonMonoxidePojo> call, Throwable t) {
+            @Override
+            public void onFailure(Call<CarbonMonoxidePojo> call, Throwable t) {
 
-                }
-            });
-
-
-        }
+            }
+        });
     }
+}
 
 
 

@@ -44,6 +44,6 @@ public class OzonePojo implements Serializable {
     public String toString() {
         return "\n time= " + time +
                 "\n " + location +
-                "\n data= " + data +"\n";
+                "\n data= " + data + "\n";
     }
 }

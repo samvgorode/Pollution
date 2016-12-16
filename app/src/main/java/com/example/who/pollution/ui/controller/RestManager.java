@@ -11,26 +11,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestManager {
 
-            PollutionService mPollutionService;
+    PollutionService mPollutionService;
 
-            public PollutionService getPollutionService(){
-                if(mPollutionService==null){
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://api.openweathermap.org/pollution/v1/")
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
+    public PollutionService getPollutionService() {
+        if (mPollutionService == null) {
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl("http://api.openweathermap.org/pollution/v1/")
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
 
-                mPollutionService = retrofit.create(PollutionService.class);}
+            mPollutionService = retrofit.create(PollutionService.class);
+        }
 
-                return mPollutionService;
-
-
-
-
-            }
-
-
-
-
-
+        return mPollutionService;
+    }
 }

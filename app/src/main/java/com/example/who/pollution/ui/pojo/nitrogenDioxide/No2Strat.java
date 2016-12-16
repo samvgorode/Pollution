@@ -34,6 +34,6 @@ public class No2Strat implements Serializable {
     public String toString() {
         return "\nprecision=" + precision +
                 "\nvalue=" + value +
-               "\n";
+                "\n";
     }
 }

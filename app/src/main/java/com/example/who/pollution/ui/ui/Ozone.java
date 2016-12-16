@@ -28,13 +28,14 @@ public class Ozone extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mManager = new RestManager();
         setContentView(R.layout.ozone_fragment);
-        mTextView = (TextView)findViewById(R.id.ozone);
+        mTextView = (TextView) findViewById(R.id.ozone);
         fillData();
     }
-    public void fillData(){
+
+    public void fillData() {
 
         Call<OzonePojo> listCall = mManager.getPollutionService().getOzone();
-        listCall.enqueue(new Callback<OzonePojo>(){
+        listCall.enqueue(new Callback<OzonePojo>() {
 
             @Override
             public void onResponse(Call<OzonePojo> call, Response<OzonePojo> response) {
